@@ -1,0 +1,1 @@
+mypy type declaration stubs for the Twilio Python API.
