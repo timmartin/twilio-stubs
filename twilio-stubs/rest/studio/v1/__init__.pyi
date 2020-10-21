@@ -1,0 +1,9 @@
+from twilio.base.version import Version as Version
+from twilio.rest.studio.v1.flow import FlowList as FlowList
+from typing import Any
+
+class V1(Version):
+    version: str = ...
+    def __init__(self, domain: Any) -> None: ...
+    @property
+    def flows(self): ...

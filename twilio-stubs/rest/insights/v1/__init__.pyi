@@ -1,0 +1,9 @@
+from twilio.base.version import Version as Version
+from twilio.rest.insights.v1.call import CallList as CallList
+from typing import Any
+
+class V1(Version):
+    version: str = ...
+    def __init__(self, domain: Any) -> None: ...
+    @property
+    def calls(self): ...

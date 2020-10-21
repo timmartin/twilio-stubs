@@ -1,0 +1,9 @@
+from twilio.base.version import Version as Version
+from twilio.rest.numbers.v2.regulatory_compliance import RegulatoryComplianceList as RegulatoryComplianceList
+from typing import Any
+
+class V2(Version):
+    version: str = ...
+    def __init__(self, domain: Any) -> None: ...
+    @property
+    def regulatory_compliance(self): ...

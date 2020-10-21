@@ -1,0 +1,9 @@
+from twilio.base.version import Version as Version
+from twilio.rest.preview.understand.assistant import AssistantList as AssistantList
+from typing import Any
+
+class Understand(Version):
+    version: str = ...
+    def __init__(self, domain: Any) -> None: ...
+    @property
+    def assistants(self): ...

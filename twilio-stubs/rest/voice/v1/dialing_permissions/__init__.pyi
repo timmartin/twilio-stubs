@@ -1,0 +1,23 @@
+from twilio.base.instance_resource import InstanceResource as InstanceResource
+from twilio.base.list_resource import ListResource as ListResource
+from twilio.base.page import Page as Page
+from twilio.rest.voice.v1.dialing_permissions.bulk_country_update import BulkCountryUpdateList as BulkCountryUpdateList
+from twilio.rest.voice.v1.dialing_permissions.country import CountryList as CountryList
+from twilio.rest.voice.v1.dialing_permissions.settings import SettingsList as SettingsList
+from typing import Any
+
+class DialingPermissionsList(ListResource):
+    def __init__(self, version: Any) -> None: ...
+    @property
+    def countries(self): ...
+    @property
+    def settings(self): ...
+    @property
+    def bulk_country_updates(self): ...
+
+class DialingPermissionsPage(Page):
+    def __init__(self, version: Any, response: Any, solution: Any) -> None: ...
+    def get_instance(self, payload: Any): ...
+
+class DialingPermissionsInstance(InstanceResource):
+    def __init__(self, version: Any, payload: Any) -> None: ...

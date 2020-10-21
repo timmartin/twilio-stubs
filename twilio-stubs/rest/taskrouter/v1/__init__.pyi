@@ -1,0 +1,9 @@
+from twilio.base.version import Version as Version
+from twilio.rest.taskrouter.v1.workspace import WorkspaceList as WorkspaceList
+from typing import Any
+
+class V1(Version):
+    version: str = ...
+    def __init__(self, domain: Any) -> None: ...
+    @property
+    def workspaces(self): ...

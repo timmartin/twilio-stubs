@@ -1,0 +1,23 @@
+from twilio.base.instance_resource import InstanceResource as InstanceResource
+from twilio.base.list_resource import ListResource as ListResource
+from twilio.base.page import Page as Page
+from twilio.rest.api.v2010.account.sip.credential_list import CredentialListList as CredentialListList
+from twilio.rest.api.v2010.account.sip.domain import DomainList as DomainList
+from twilio.rest.api.v2010.account.sip.ip_access_control_list import IpAccessControlListList as IpAccessControlListList
+from typing import Any
+
+class SipList(ListResource):
+    def __init__(self, version: Any, account_sid: Any) -> None: ...
+    @property
+    def domains(self): ...
+    @property
+    def ip_access_control_lists(self): ...
+    @property
+    def credential_lists(self): ...
+
+class SipPage(Page):
+    def __init__(self, version: Any, response: Any, solution: Any) -> None: ...
+    def get_instance(self, payload: Any): ...
+
+class SipInstance(InstanceResource):
+    def __init__(self, version: Any, payload: Any, account_sid: Any) -> None: ...

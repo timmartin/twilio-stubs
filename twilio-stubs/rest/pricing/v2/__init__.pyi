@@ -1,0 +1,9 @@
+from twilio.base.version import Version as Version
+from twilio.rest.pricing.v2.voice import VoiceList as VoiceList
+from typing import Any
+
+class V2(Version):
+    version: str = ...
+    def __init__(self, domain: Any) -> None: ...
+    @property
+    def voice(self): ...
