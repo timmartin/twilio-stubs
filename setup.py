@@ -9,6 +9,7 @@ setuptools.setup(
     author="Tim Martin",
     author_email="tim@asymptotic.co.uk",
     description="Type declarations for the Twilio API",
+    url="https://github.com/timmartin/twilio-stubs",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=['twilio-stubs'],
