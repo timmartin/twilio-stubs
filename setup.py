@@ -13,5 +13,8 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=['twilio-stubs'],
+    install_requires=[
+        "twilio>=6.46.0"
+    ],
     zip_safe=False
 )
