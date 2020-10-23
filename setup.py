@@ -1,7 +1,17 @@
+import os.path
+
 import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
+
+def find_stubs(package):
+    stubs = []
+    for root, dirs, files in os.walk(package):
+        for file in files:
+            path = os.path.join(root, file).replace(package + os.sep, "", 1)
+            stubs.append(path)
+    return {package: stubs}
 
 setuptools.setup(
     name="twilio-stubs",
@@ -16,5 +26,6 @@ setuptools.setup(
     install_requires=[
         "twilio>=6.46.0"
     ],
+    package_data=find_stubs("twilio-stubs"),
     zip_safe=False
 )
