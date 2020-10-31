@@ -28,6 +28,7 @@ setuptools.setup(
     ],
     package_data=find_stubs("twilio-stubs"),
     classifiers=[
+        "Programming Language :: Python :: 3",
         "Development Status :: 3 - Alpha",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
