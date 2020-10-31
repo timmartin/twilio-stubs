@@ -1,4 +1,3 @@
-from urllib import urlencode as urlencode
-from urlparse import parse_qs as parse_qs, urljoin as urljoin, urlparse as urlparse, urlunparse as urlunparse
+from urllib.parse import urlencode as urlencode, urlparse as urlparse, urljoin as urljoin, urlunparse as urlunparse, parse_qs as parse_qs
 
 izip = zip
