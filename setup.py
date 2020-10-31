@@ -27,5 +27,11 @@ setuptools.setup(
         "twilio>=6.46.0"
     ],
     package_data=find_stubs("twilio-stubs"),
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Typing :: Typed"
+    ],
     zip_safe=False
 )
