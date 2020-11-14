@@ -1,0 +1,28 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@1.2.1
+
+jobs:
+  build-and-test:
+    executor: python/default
+    steps:
+      - checkout
+
+      # Install dev requirements
+      - python/install-packages:
+          pip-dependency-file: requirements.txt
+          pkg-manager: pip
+
+      # Install the package under test
+      - python/install-packages:
+          pkg-manager: pip-dist
+
+      - run:
+          command: stubtest twilio
+          name: Test
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
