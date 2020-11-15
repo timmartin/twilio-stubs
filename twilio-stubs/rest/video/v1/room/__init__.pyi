@@ -5,6 +5,7 @@ from twilio.base.list_resource import ListResource as ListResource
 from twilio.base.page import Page as Page
 from twilio.rest.video.v1.room.recording import RoomRecordingList as RoomRecordingList
 from twilio.rest.video.v1.room.room_participant import ParticipantList as ParticipantList
+from twilio.rest.video.v1.room.room_recording_rule import RecordingRulesList as RecordingRulesList
 from typing import Any, Optional
 
 class RoomList(ListResource):
@@ -29,6 +30,8 @@ class RoomContext(InstanceContext):
     def recordings(self): ...
     @property
     def participants(self): ...
+    @property
+    def recording_rules(self): ...
 
 class RoomInstance(InstanceResource):
     class RoomStatus:
@@ -86,3 +89,5 @@ class RoomInstance(InstanceResource):
     def recordings(self): ...
     @property
     def participants(self): ...
+    @property
+    def recording_rules(self): ...

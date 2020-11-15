@@ -1,5 +1,6 @@
 from twilio.base.version import Version as Version
 from twilio.rest.insights.v1.call import CallList as CallList
+from twilio.rest.insights.v1.room import RoomList as RoomList
 from typing import Any
 
 class V1(Version):
@@ -7,3 +8,5 @@ class V1(Version):
     def __init__(self, domain: Any) -> None: ...
     @property
     def calls(self): ...
+    @property
+    def rooms(self): ...
