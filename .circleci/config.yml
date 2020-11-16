@@ -32,12 +32,14 @@ jobs:
             - "*.tar.gz"
 
   deploy:
-    - attach-workspace:
-        at: dist
+    executor: python/default
+    steps:
+      - attach_workspace:
+          at: dist
 
-    - run:
-        name: Deploy to PyPI
-        run: python -m twine upload dist/*
+      - run:
+          name: Deploy to PyPI
+          command: python -m twine upload dist/*
 
 workflows:
   main:
