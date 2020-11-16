@@ -19,10 +19,46 @@ jobs:
           pkg-manager: pip-dist
 
       - run:
-          command: stubtest twilio
           name: Test
+          command: stubtest twilio
+
+      - run:
+          name: Build dist package
+          command: python setup.py sdist
+
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - "*.tar.gz"
+
+  deploy:
+    executor: python/default
+    steps:
+      - checkout
+
+      - python/install-packages:
+          pip-dependency-file: requirements.txt
+          pkg-manager: pip
+
+      - attach_workspace:
+          at: dist
+
+      - run:
+          name: Deploy to PyPI
+          command: python -m twine upload dist/*
 
 workflows:
   main:
     jobs:
       - build-and-test
+
+      - deploy:
+          context: PyPI
+          requires:
+            - build-and-test
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
+
