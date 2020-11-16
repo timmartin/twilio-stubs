@@ -56,4 +56,9 @@ workflows:
           context: PyPI
           requires:
             - build-and-test
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
 
