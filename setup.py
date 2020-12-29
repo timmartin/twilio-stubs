@@ -15,7 +15,7 @@ def find_stubs(package):
 
 setuptools.setup(
     name="twilio-stubs",
-    version="0.0.4",
+    version="0.0.5",
     author="Tim Martin",
     author_email="tim@asymptotic.co.uk",
     description="Type declarations for the Twilio API",
