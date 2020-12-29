@@ -5,7 +5,7 @@ from twilio.compat import urlencode as urlencode
 from twilio.http import HttpClient as HttpClient
 from twilio.http.request import Request
 from twilio.http.response import Response
-from typing import Any, Optional
+from typing import Any, Dict, Optional, Tuple
 
 class TwilioHttpClient(HttpClient):
     session: requests.Session = ...
@@ -18,4 +18,4 @@ class TwilioHttpClient(HttpClient):
 
     def __init__(self, pool_connections: bool = ..., request_hooks: Optional[Any] = ..., timeout: Optional[int] = ..., logger: logging.Logger = ..., proxy: Optional[Any] = ..., max_retries: Optional[int] = ...) -> None: ...
 
-    def request(self, method: Any, url: Any, params: Optional[Any] = ..., data: Optional[Any] = ..., headers: Optional[Any] = ..., auth: Optional[Any] = ..., timeout: Optional[Any] = ..., allow_redirects: bool = ...) -> Response: ...
+    def request(self, method: str, url: str, params: Optional[Dict] = ..., data: Optional[Dict] = ..., headers: Optional[Dict] = ..., auth: Optional[Tuple] = ..., timeout: Optional[float] = ..., allow_redirects: bool = ...) -> Response: ...
