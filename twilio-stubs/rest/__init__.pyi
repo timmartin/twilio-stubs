@@ -34,28 +34,28 @@ from twilio.rest.supersim import Supersim
 from twilio.rest.bulkexports import Bulkexports
 from twilio.rest.api.v2010.account.address import AddressList
 from twilio.rest.api.v2010.account.application import ApplicationList
-from twilio.rest.api.v2010.account.authorized_connect_app import AuthorizedConnectAppList as AuthorizedConnectAppList
-from twilio.rest.api.v2010.account.available_phone_number import AvailablePhoneNumberCountryList as AvailablePhoneNumberCountryList
-from twilio.rest.api.v2010.account.balance import BalanceList as BalanceList
-from twilio.rest.api.v2010.account.call import CallList as CallList
-from twilio.rest.api.v2010.account.conference import ConferenceList as ConferenceList
-from twilio.rest.api.v2010.account.connect_app import ConnectAppList as ConnectAppList
-from twilio.rest.api.v2010.account.incoming_phone_number import IncomingPhoneNumberList as IncomingPhoneNumberList
-from twilio.rest.api.v2010.account.key import KeyList as KeyList
-from twilio.rest.api.v2010.account.message import MessageList as MessageList
-from twilio.rest.api.v2010.account.new_key import NewKeyList as NewKeyList
-from twilio.rest.api.v2010.account.new_signing_key import NewSigningKeyList as NewSigningKeyList
-from twilio.rest.api.v2010.account.notification import NotificationList as NotificationList
-from twilio.rest.api.v2010.account.outgoing_caller_id import OutgoingCallerIdList as OutgoingCallerIdList
-from twilio.rest.api.v2010.account.queue import QueueList as QueueList
-from twilio.rest.api.v2010.account.recording import RecordingList as RecordingList
-from twilio.rest.api.v2010.account.short_code import ShortCodeList as ShortCodeList
-from twilio.rest.api.v2010.account.signing_key import SigningKeyList as SigningKeyList
-from twilio.rest.api.v2010.account.sip import SipList as SipList
-from twilio.rest.api.v2010.account.token import TokenList as TokenList
-from twilio.rest.api.v2010.account.transcription import TranscriptionList as TranscriptionList
-from twilio.rest.api.v2010.account.usage import UsageList as UsageList
-from twilio.rest.api.v2010.account.validation_request import ValidationRequestList as ValidationRequestList
+from twilio.rest.api.v2010.account.authorized_connect_app import AuthorizedConnectAppList
+from twilio.rest.api.v2010.account.available_phone_number import AvailablePhoneNumberCountryList
+from twilio.rest.api.v2010.account.balance import BalanceList
+from twilio.rest.api.v2010.account.call import CallList
+from twilio.rest.api.v2010.account.conference import ConferenceList
+from twilio.rest.api.v2010.account.connect_app import ConnectAppList
+from twilio.rest.api.v2010.account.incoming_phone_number import IncomingPhoneNumberList
+from twilio.rest.api.v2010.account.key import KeyList
+from twilio.rest.api.v2010.account.message import MessageList
+from twilio.rest.api.v2010.account.new_key import NewKeyList
+from twilio.rest.api.v2010.account.new_signing_key import NewSigningKeyList
+from twilio.rest.api.v2010.account.notification import NotificationList
+from twilio.rest.api.v2010.account.outgoing_caller_id import OutgoingCallerIdList
+from twilio.rest.api.v2010.account.queue import QueueList
+from twilio.rest.api.v2010.account.recording import RecordingList
+from twilio.rest.api.v2010.account.short_code import ShortCodeList
+from twilio.rest.api.v2010.account.signing_key import SigningKeyList
+from twilio.rest.api.v2010.account.sip import SipList
+from twilio.rest.api.v2010.account.token import TokenList
+from twilio.rest.api.v2010.account.transcription import TranscriptionList
+from twilio.rest.api.v2010.account.usage import UsageList
+from twilio.rest.api.v2010.account.validation_request import ValidationRequestList
 
 from typing import Any, Optional
 
