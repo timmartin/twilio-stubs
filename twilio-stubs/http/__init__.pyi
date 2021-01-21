@@ -1,5 +1,5 @@
 from twilio.base.exceptions import TwilioException as TwilioException
-from typing import Any, Optional
+from typing import Any, Dict, Optional, Tuple
 
 class HttpClient:
-    def request(self, method: Any, url: Any, params: Optional[Any] = ..., data: Optional[Any] = ..., headers: Optional[Any] = ..., auth: Optional[Any] = ..., timeout: Optional[Any] = ..., allow_redirects: bool = ...): ...
+    def request(self, method: str, url: str, params: Optional[Dict] = ..., data: Optional[Dict] = ..., headers: Optional[Dict] = ..., auth: Optional[Tuple] = ..., timeout: Optional[float] = ..., allow_redirects: bool = ...): ...
