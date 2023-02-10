@@ -2,6 +2,7 @@ from twilio.base.version import Version as Version
 from twilio.rest.flex_api.v1.channel import ChannelList as ChannelList
 from twilio.rest.flex_api.v1.configuration import ConfigurationList as ConfigurationList
 from twilio.rest.flex_api.v1.flex_flow import FlexFlowList as FlexFlowList
+from twilio.rest.flex_api.v1.interaction import InteractionList as InteractionList
 from twilio.rest.flex_api.v1.web_channel import WebChannelList as WebChannelList
 from typing import Any
 
@@ -14,5 +15,7 @@ class V1(Version):
     def configuration(self): ...
     @property
     def flex_flow(self): ...
+    @property
+    def interaction(self): ...
     @property
     def web_channel(self): ...
