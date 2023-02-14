@@ -25,7 +25,7 @@ pkginfo==1.6.1
 progress==1.5
 pycparser==2.20
 Pygments==2.7.2
-PyJWT==1.7.1
+PyJWT==2.6.0
 pyparsing==2.4.6
 pytoml==0.1.21
 pytz==2020.4
@@ -37,7 +37,7 @@ rfc3986==1.4.0
 SecretStorage==3.2.0
 six==1.14.0
 tqdm==4.51.0
-twilio==6.47.0
+twilio==7.16.3
 twine==3.2.0
 types-requests==2.28.11.12
 typing-extensions==4.4.0

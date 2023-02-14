@@ -24,7 +24,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     packages=['twilio-stubs'],
     install_requires=[
-        "twilio>=6.47.0"
+        "twilio>=7.16.3"
     ],
     package_data=find_stubs("twilio-stubs"),
     classifiers=[
