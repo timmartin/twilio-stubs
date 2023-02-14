@@ -5,7 +5,10 @@ orbs:
 
 jobs:
   build-and-test:
-    executor: python/default
+    executor:
+      name: python/default
+      tag: "3.10"
+
     steps:
       - checkout
 
@@ -32,7 +35,10 @@ jobs:
             - "*.tar.gz"
 
   deploy:
-    executor: python/default
+    executor:
+      name: python/default
+      tag: "3.10"
+
     steps:
       - checkout
 
