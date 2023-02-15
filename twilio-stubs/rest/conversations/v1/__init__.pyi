@@ -1,21 +1,26 @@
 from twilio.base.version import Version as Version
+from twilio.rest.conversations.v1.address_configuration import AddressConfigurationList as AddressConfigurationList
 from twilio.rest.conversations.v1.configuration import ConfigurationList as ConfigurationList
 from twilio.rest.conversations.v1.conversation import ConversationList as ConversationList
 from twilio.rest.conversations.v1.credential import CredentialList as CredentialList
+from twilio.rest.conversations.v1.participant_conversation import ParticipantConversationList as ParticipantConversationList
 from twilio.rest.conversations.v1.role import RoleList as RoleList
 from twilio.rest.conversations.v1.service import ServiceList as ServiceList
 from twilio.rest.conversations.v1.user import UserList as UserList
-from typing import Any
 
 class V1(Version):
-    version: str = ...
-    def __init__(self, domain: Any) -> None: ...
+    version: str
+    def __init__(self, domain) -> None: ...
     @property
     def configuration(self): ...
+    @property
+    def address_configurations(self): ...
     @property
     def conversations(self): ...
     @property
     def credentials(self): ...
+    @property
+    def participant_conversations(self): ...
     @property
     def roles(self): ...
     @property

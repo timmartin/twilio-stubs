@@ -1,3 +1,0 @@
-from typing import Any
-
-def compare_digest(a: Any, b: Any): ...

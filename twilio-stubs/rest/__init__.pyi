@@ -1,20 +1,21 @@
+from typing import Any
+from _typeshed import Incomplete
 from twilio.base.exceptions import TwilioException as TwilioException
 from twilio.base.obsolete import obsolete_client as obsolete_client
-from twilio.compat import urlparse as urlparse, urlunparse as urlunparse
 from twilio.http.http_client import TwilioHttpClient as TwilioHttpClient
-from twilio.http.response import Response
 from twilio.rest.accounts import Accounts
 from twilio.rest.api import Api
 from twilio.rest.autopilot import Autopilot
 from twilio.rest.chat import Chat
 from twilio.rest.conversations import Conversations
 from twilio.rest.events import Events
-from twilio.rest.fax import Fax
 from twilio.rest.flex_api import FlexApi
 from twilio.rest.insights import Insights
 from twilio.rest.ip_messaging import IpMessaging
 from twilio.rest.lookups import Lookups
+from twilio.rest.media import Media
 from twilio.rest.messaging import Messaging
+from twilio.rest.microvisor import Microvisor
 from twilio.rest.monitor import Monitor
 from twilio.rest.notify import Notify
 from twilio.rest.numbers import Numbers
@@ -26,6 +27,7 @@ from twilio.rest.studio import Studio
 from twilio.rest.sync import Sync
 from twilio.rest.taskrouter import Taskrouter
 from twilio.rest.trunking import Trunking
+from twilio.rest.trusthub import Trusthub
 from twilio.rest.verify import Verify
 from twilio.rest.video import Video
 from twilio.rest.voice import Voice
@@ -57,23 +59,21 @@ from twilio.rest.api.v2010.account.transcription import TranscriptionList
 from twilio.rest.api.v2010.account.usage import UsageList
 from twilio.rest.api.v2010.account.validation_request import ValidationRequestList
 
-from typing import Any, Optional
 
 class Client:
-    username: Any = ...
-    password: Any = ...
-    account_sid: Any = ...
-    edge: Any = ...
-    region: Any = ...
-    auth: Any = ...
+    username: Incomplete
+    password: Incomplete
+    account_sid: Incomplete
+    edge: Incomplete
+    region: Incomplete
+    user_agent_extensions: Incomplete
+    auth: Incomplete
 
     http_client: TwilioHttpClient = ...
 
-    def __init__(self, username: Optional[Any] = ..., password: Optional[Any] = ..., account_sid: Optional[Any] = ..., region: Optional[Any] = ..., http_client: Optional[Any] = ..., environment: Optional[Any] = ..., edge: Optional[Any] = ...) -> None: ...
-
-    def request(self, method: Any, uri: Any, params: Optional[Any] = ..., data: Optional[Any] = ..., headers: Optional[Any] = ..., auth: Optional[Any] = ..., timeout: Optional[Any] = ..., allow_redirects: bool = ...) -> Response: ...
-
-    def get_hostname(self, uri: str) -> str: ...
+    def __init__(self, username: Incomplete | None = ..., password: Incomplete | None = ..., account_sid: Incomplete | None = ..., region: Incomplete | None = ..., http_client: Incomplete | None = ..., environment: Incomplete | None = ..., edge: Incomplete | None = ..., user_agent_extensions: Incomplete | None = ...) -> None: ...
+    def request(self, method, uri, params: Incomplete | None = ..., data: Incomplete | None = ..., headers: Incomplete | None = ..., auth: Incomplete | None = ..., timeout: Incomplete | None = ..., allow_redirects: bool = ...): ...
+    def get_hostname(self, uri): ...
 
     @property
     def accounts(self) -> Accounts: ...
@@ -88,16 +88,19 @@ class Client:
     def chat(self) -> Chat: ...
 
     @property
+    def content(self): ...
+
+    @property
     def conversations(self) -> Conversations: ...
 
     @property
     def events(self) -> Events: ...
 
     @property
-    def fax(self) -> Fax: ...
+    def flex_api(self) -> FlexApi: ...
 
     @property
-    def flex_api(self) -> FlexApi: ...
+    def frontline_api(self): ...
 
     @property
     def insights(self) -> Insights: ...
@@ -107,6 +110,9 @@ class Client:
 
     @property
     def lookups(self) -> Lookups: ...
+
+    @property
+    def media(self) -> Media: ...
 
     @property
     def messaging(self) -> Messaging: ...
@@ -121,6 +127,9 @@ class Client:
     def numbers(self) -> Numbers: ...
 
     @property
+    def oauth(self): ...
+
+    @property
     def preview(self) -> Preview: ...
 
     @property
@@ -128,6 +137,9 @@ class Client:
 
     @property
     def proxy(self) -> Proxy: ...
+
+    @property
+    def routes(self): ...
 
     @property
     def serverless(self) -> Serverless: ...
@@ -143,6 +155,9 @@ class Client:
 
     @property
     def trunking(self) -> Trunking: ...
+
+    @property
+    def trusthub(self) -> Trusthub: ...
 
     @property
     def verify(self) -> Verify: ...
@@ -161,6 +176,9 @@ class Client:
 
     @property
     def bulkexports(self) -> Bulkexports: ...
+
+    @property
+    def microvisor(self) -> Microvisor: ...
 
     @property
     def addresses(self) -> AddressList: ...
