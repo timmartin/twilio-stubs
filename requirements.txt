@@ -39,6 +39,7 @@ six==1.14.0
 tqdm==4.51.0
 twilio==7.16.3
 twine==3.2.0
+types-pytz==2022.7.1.0
 types-requests==2.28.11.12
 typing-extensions==4.4.0
 urllib3==1.25.8

@@ -5,11 +5,10 @@ from twilio.rest.video.v1.composition_settings import CompositionSettingsList as
 from twilio.rest.video.v1.recording import RecordingList as RecordingList
 from twilio.rest.video.v1.recording_settings import RecordingSettingsList as RecordingSettingsList
 from twilio.rest.video.v1.room import RoomList as RoomList
-from typing import Any
 
 class V1(Version):
-    version: str = ...
-    def __init__(self, domain: Any) -> None: ...
+    version: str
+    def __init__(self, domain) -> None: ...
     @property
     def compositions(self): ...
     @property
